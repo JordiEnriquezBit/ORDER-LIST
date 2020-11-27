@@ -1,6 +1,5 @@
 import { Order } from './../interfaces/order';
 import { Observable } from 'rxjs';
-import { AngularFireStore } from '@angular/fire/store';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 

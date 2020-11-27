@@ -1,0 +1,75 @@
+{
+  "orders": [
+    {
+      "id": "44001ddd-5033-4ef2-ba3f-6324f53e6fd1",
+      "name": "jordi1",
+      "table": "1",
+      "products": [
+        {
+          "product": "Americano",
+          "i": 4
+        },
+        {
+          "product": "Latte",
+          "i": 1
+        }
+      ],
+      "waitress": "jordi"
+    },
+    {
+      "id": "96c46d31-d3d7-4ad8-8e4f-b4366759bce0",
+      "name": "sadasdsda",
+      "table": "",
+      "products": [
+        {
+          "product": "Americano",
+          "i": 12
+        },
+        {
+          "product": "Flat White",
+          "i": 1
+        },
+        {
+          "product": "Cappuccino",
+          "i": 1
+        },
+        {
+          "product": "Latte",
+          "i": 1
+        },
+        {
+          "product": "Espresso",
+          "i": 1
+        },
+        {
+          "product": "Machiato",
+          "i": 1
+        },
+        {
+          "product": "Mocha",
+          "i": 1
+        },
+        {
+          "product": "Hot Chocolate",
+          "i": 1
+        },
+        {
+          "product": "Tea",
+          "i": 1
+        }
+      ],
+      "waitress": "jordi"
+    }
+  ],
+  "products": [
+    "Americano",
+    "Flat White",
+    "Cappuccino",
+    "Latte",
+    "Espresso",
+    "Machiato",
+    "Mocha",
+    "Hot Chocolate",
+    "Tea"
+  ]
+}

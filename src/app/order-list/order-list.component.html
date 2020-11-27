@@ -1,1 +1,8 @@
-<p>order-list works!</p>
+<h5>Comandas pendientes</h5>
+
+<mat-list *ngFor="let order of orderList">
+  <mat-list-item>{{order['name']}} / mesa:{{order['table']}}</mat-list-item>
+  <span *ngFor='let item of order.products'><span>{{item['product']}}-{{item['i']}}</span> | </span>
+  <br>
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------
+</mat-list>

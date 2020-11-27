@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "order-list-prueba": {
+      "hosting": {
+        "orders": [
+          "order-list-prueba"
+        ]
+      }
+    }
+  }
+}

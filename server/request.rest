@@ -1,0 +1,24 @@
+### request for orders#####
+GET http://localhost:3000/orders
+
+#### post ####
+
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+    {
+        "id":"2",
+        "name":"jhon",
+        "table":"2",
+        "products":[
+            "Espresso",
+            "Latte"
+        ]
+    }
+######## DELETE ##########
+DELETE http://localhost:3000/orders/
+#########  ##########
+
+GET http://localhost:3000/products
+

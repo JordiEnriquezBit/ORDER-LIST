@@ -27,10 +27,13 @@
 
   <mat-list>
     <mat-list-item *ngFor='let product of orderProducts; let i=index'>
-      <span>{{product}}</span>
-      <button mat-icon-button  (click)=removeFromOrder(i)>
+      <span>{{product.product}}</span>
+      <button mat-icon-button (click)="ModifyQuantityProduct(product,'-')"><</button>
+      <input type="number" matInput style="width: 30px;"  disabled value="{{product.i}}">
+      <button mat-icon-button (click)="ModifyQuantityProduct(product,'+')">></button>
+     <!-- <button mat-icon-button  (click)=removeFromOrder(i)>
         <mat-icon>close</mat-icon>
-      </button>
+      </button>-->
     </mat-list-item>
   </mat-list>
   <button mat-raised-button color='primary' id = 'submit' (click)=submit(formGroup)>Submit Order</button>

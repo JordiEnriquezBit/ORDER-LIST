@@ -9,7 +9,9 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import {  AngularFirestoreModule } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

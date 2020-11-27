@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { v4 as uuid } from 'uuid';
 import { Order } from '../shared/interfaces/order';
+import { FireService } from '../shared/services/fire.service';
 import { OrderService } from '../shared/services/order.service';
 @Component({
   selector: 'app-order',
@@ -27,7 +28,7 @@ export class OrderComponent implements OnInit {
   formGroup: FormGroup;
   //[p,p,p]
   contador: number;
-  constructor(private fb: FormBuilder, private orderService: OrderService) {
+  constructor(private fb: FormBuilder, private orderService: OrderService,  private afs:FireService ) {
     this.orderProducts = [];
   }
 
@@ -94,7 +95,7 @@ console.log(index);
     this.orderProducts.splice(i, 1);
   }
 
-  submit(form){
+  async submit(form){
 
     let order: Order = {
       id:      uuid(),
@@ -103,6 +104,7 @@ console.log(index);
       products: this.orderProducts,
       waitress: "jordi"
     }
+    await this.afs.create(order);
 
     //   this.orderService.create$(order).subscribe(e => {
     //   this.formGroup.reset();
@@ -112,7 +114,8 @@ console.log(index);
     //localStorage.setItem('name',`${order.name}`)
     localStorage.setItem('name',"jordi");
 
-    this.orderService.create(order);
+    //this.orderService.create(order);
+    this.afs.create(order);
     this.formGroup.reset();
     this.orderProducts=[];
     this.sendSuccess=true;
